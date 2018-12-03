@@ -1,0 +1,19 @@
+{extend name="public/Base"}
+{block name="link"}
+  {css href="__STATIC__/Amaze/css/index.css" /}
+{/block}
+{block name="script"} {/block}
+{block name="body"}
+  <div class="container">
+{include file="index/header"}
+    <div class="content">
+{include file="index/left-side"}
+{include file="index/right-content"}
+    </div>
+  </div>{/block} {block name="thisJs"}
+    {load href="__STATIC__/Amaze/js/admin.js" /}
+    {load href="__STATIC__/Amaze/js/app.js" /}
+  {/block} {block name="thisScript"} 
+  <script type="text/javascript">
+    var AdminPanel = $(document).AdminPanel({});
+  </script> {/block}

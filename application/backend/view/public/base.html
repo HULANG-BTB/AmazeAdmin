@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<!-- 页面head内容 -->
+<head>
+  <meta charset="utf-8">
+  <!-- SEO设置 -->
+  <title>{$page.title|default="没有标题"}</title>
+  <meta name="description" content="{$page.description|default="没有描述"}">
+  <meta name="keywords" content="{$page.keywords|default="没有关键字"}">
+  <meta name="apple-mobile-web-app-title" content="{$page.title|default="没有标题"}" />
+  <link rel="icon" type="image/png" href="{$page.favicon|default="/favicon.ico"}">
+  <!-- 页面信息 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!-- 全局style -->
+{include file="public/link"}
+  <!-- 用户自定义style -->
+{block name="link"} {/block}
+  <!-- 全局JavaScript -->
+{include file="public/script"}
+  <!-- 用户自定义全局JS -->
+{block name="script"} {/block}
+</head>
+<!-- 页面body内容 -->
+<body>
+  <!-- 页面主体内容 -->
+{block name="body"} {/block}
+  <!-- 本页面JS -->
+{block name="thisJs"} {/block}
+  <!-- 本页面Script -->
+{block name="thisScript"} {/block}
+</body>
+</html>
